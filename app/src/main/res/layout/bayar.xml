@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="28dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/layout_note"
+        android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:background="@color/colorPrimary"
+            android:weightSum="2">
+            <TextView android:gravity="fill"
+                android:layout_gravity="center_vertical|end"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="Terima kasih pesanan a.n Sutadi Triputra dengan NIK. EDI1/TEK/007 telah dicatat ke dalam sistem. Koperasi akan melakukan pengiriman barang ke alamat Jl. Derwati Mas 3 No. 14 Kota bandung 40292. Anda dapat melakukan pengecekan pesanan melalui halaman Status Pemesanan"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_bayar"
+        android:layout_above="@+id/layout_total"
+        android:layout_below="@+id/layout_note"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/layout_total"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal">
+        <LinearLayout
+
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:weightSum="4"
+            android:orientation="horizontal">
+        <LinearLayout
+
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <LinearLayout
+
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="left"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1.5"
+                    android:gravity="left"
+                    android:text="Belanja + Ongkir"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"></TextView>
+                <TextView
+                    android:id="@+id/totalbayar"
+                    android:gravity="left"
+                    android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:text=": Rp. 100.000"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+            </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+                <TextView android:gravity="left"
+                    android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:text="Sisa Saldo"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+            </TextView>
+                <TextView android:gravity="left"
+                    android:id="@+id/sisasaldo"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.5"
+                    android:text=": Rp. 130.000"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/btn_placeorder"
+                android:layout_gravity="center_vertical|right"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:onClick="insertOrder"
+                android:text="OK"
+                android:layout_weight="1.5"
+                android:textColor="@color/black"
+                android:theme="@style/Theme.KoperasiBUM">
+            </Button>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

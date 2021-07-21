@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/black"
+        android:background="@color/colorPrimary">
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/viewprofil">
+        <ImageView
+            android:padding="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fotoprofil"
+            android:src="@mipmap/ic_user"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fotoprofil"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="Selamat Datang xxxxx" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="No. Anggota" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:id="@+id/tvNoAnggota"
+                    android:text="No. Anggota" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Divisi" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:id="@+id/tvDivisi"
+                    android:text="Divisi" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Saldo" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:id="@+id/tvNamaAnggota"
+                    android:text="Rp. 500.000" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/viewprofil"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:id="@+id/batas1"
+        android:background="@color/colorAccent"/>
+    <TextView
+        android:layout_below="@id/batas1"
+        android:id="@+id/labelkategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Pilih Kategori"/>
+    <HorizontalScrollView
+        android:layout_below="@id/labelkategori"
+        android:id="@+id/kategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_sembako"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/sembako"
+                android:text="Button 1" />
+
+            <ImageButton
+                android:id="@+id/btn_fashion"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/fashion"
+                android:text="Button 1" />
+
+            <ImageButton
+                android:id="@+id/btn_kosmetik"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/kosmetik"
+                android:text="Button 1" />
+
+            <ImageButton
+                android:id="@+id/btn_anak"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/anak"
+                android:text="Button 1" />
+
+
+            <ImageButton
+                android:id="@+id/btn_busana_muslim"
+                android:layout_width="80dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="80dp"
+                android:background="@drawable/busanamuslim"
+                android:text="Button 1" />
+            <ImageButton
+                android:id="@+id/btn_snack"
+                android:layout_width="80dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="80dp"
+                android:background="@drawable/snack"
+                android:text="Button 1" />
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <View
+        android:layout_below="@id/kategori"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:id="@+id/batas2"
+        android:background="@color/colorAccent"/>
+    <TextView
+        android:layout_below="@id/batas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="15sp"
+        android:id="@+id/labellaris"
+        android:layout_margin="8dp"
+        android:text="Produk Terlaris"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/labellaris"
+        android:id="@+id/recyclerview_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

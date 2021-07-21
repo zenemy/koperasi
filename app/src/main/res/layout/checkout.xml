@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/layout_alamat"
+        android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:background="@color/colorPrimary"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <TextView android:gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="Alamat Pengiriman"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+            <TextView android:gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="Jl. Derwati Mas 3 No. 14. Kel. Derwati, Kec. Rancasari. Kota Bandung 40292"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_below="@id/layout_alamat"
+        android:hint="Tambahkan pesan untuk kurir"
+        android:id="@+id/pesankurir"/>
+    <View
+        android:layout_below="@id/pesankurir"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/batas1"
+        android:background="@color/colorAccent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/layout_totalpesanan"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/batas1">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:background="@color/colorPrimary"
+            android:weightSum="3">
+
+            <TextView android:id="@+id/totalproduk"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="Total pesanan(2 Produk)"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+            <TextView
+                android:id="@+id/totalbelanja"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:text="Rp. 70.000"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/layout_saldobelanja"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/layout_totalpesanan">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:background="@color/colorPrimary"
+            android:weightSum="2">
+
+            <TextView android:gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="Total Saldo Belanja"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+            <TextView
+                android:id="@+id/totalsaldo"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="Rp. 230.000"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/layout_ongkir"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/layout_saldobelanja">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:background="@color/colorPrimary"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:weightSum="2">
+
+            <TextView android:gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="SubTotal Produk"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+            <TextView android:id="@+id/totalbelanja_sub"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="Rp. 70.000"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+            </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:weightSum="2">
+
+                <TextView android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="Biaya Pengiriman"
+                    android:textColor="@color/black"
+                    android:textSize="14sp">
+                </TextView>
+                <TextView android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="Rp. 30.000"
+                    android:textColor="@color/black"
+                    android:textSize="14sp">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/layout_total"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal">
+        <LinearLayout
+
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:weightSum="4"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/totalbayar"
+                android:gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:text="Total : Rp. 100.000"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+            </TextView>
+
+
+            <Button
+                android:id="@+id/btn_placeorder"
+                android:layout_gravity="center_vertical|right"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Konfirmasi Pembayaran"
+                android:layout_weight="2"
+                android:textColor="@color/black"
+                android:theme="@style/Theme.KoperasiBUM">
+            </Button>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/miCart"
+        android:icon="@mipmap/ic_cart"
+        app:showAsAction="ifRoom"
+        android:actionLayout="@layout/badgenotif"
+        android:title="Keranjang Belanja">
+    </item>
+    <item
+        android:id="@+id/miCompose"
+        android:icon="@mipmap/ic_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:title="Cari Produk"
+        app:actionViewClass="androidx.appcompat.widget.SearchView">
+    </item>
+    <item
+        android:id="@+id/action_profil"
+        android:enabled="true"
+        android:icon="@drawable/profil"
+        android:title="Profil"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_history"
+        android:enabled="true"
+        android:icon="@drawable/history"
+        android:title="History Pembelian"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_order"
+        android:enabled="true"
+        android:icon="@drawable/statuspesanan"
+        android:title="Status Pesanan"
+        app:showAsAction="ifRoom" />
+
+
+</menu>
